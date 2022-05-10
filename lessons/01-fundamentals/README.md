@@ -94,5 +94,4 @@ Por tanto, en un espacio afín tenemos __escalares__, __vectores__ (que definen 
 [Conceptos básicos de vectores](https://calculo.cc/temas/temas_geometria_analitica/vectores_espacio/teoria/vector.html)  
 [Operaciones básicas con vectores y ejercicios resueltos](https://www.superprof.es/apuntes/escolar/matematicas/analitica/vectores/operaciones-de-vectores-en-el-espacio.html)  
 [Producto vectorial](https://www.centroestudioscervantinos.es/producto-vectorial/#Producto_vectorial_de_dos_vectores)  
-[Espacio afín](https://es.wikipedia.org/wiki/Espacio_af%C3%ADn)  
-[.](.)
+[Espacio afín](https://es.wikipedia.org/wiki/Espacio_af%C3%ADn)
