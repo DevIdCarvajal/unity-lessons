@@ -1,5 +1,7 @@
 # Curso de Unity
 
+- Servidor Discord: [Enlace de invitación](https://discord.gg/H9RA3eQX)
+
 ## Temario
 
 [1. Introducción al mundo 3D](#1-introducción-al-mundo-3d)  
@@ -144,7 +146,7 @@ Conocer las particularidades del desarrollo con Unity para otras plataformas dif
 
 ### Contenidos
 
-- Compilación del juego en diferentes plataformas0.
+- Compilación del juego en diferentes plataformas.
 - Peculiaridades de dispositivos móviles y consolas:
   - Touch
   - Acelerómetros
@@ -175,4 +177,4 @@ Poner en práctica los contenidos realizando un proyecto real.
 
 ## Referencias generales
 
-[.](https://.)
+[Documentación oficial Unity](https://docs.unity3d.com/Manual/index.html)

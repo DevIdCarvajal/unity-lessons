@@ -1,13 +1,10 @@
-# . 
+# 5. Los personajes
 
-## Índice
+## Contenidos
 
-[1. ]()  
-[. ]()
-
-## 1. 
-
-.
+- Importación de personajes de otros sistemas
+- Animación de personajes (clásica y Mecanim)
+- RagDoll
 
 ## Referencias
 

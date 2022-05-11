@@ -1,13 +1,13 @@
-# . 
+# 6. Físicas
 
-## Índice
+## Contenidos
 
-[1. ]()  
-[. ]()
-
-## 1. 
-
-.
+- Mallas de colisión
+- Triggers
+- Joints
+- RigidBodies y SoftBodies
+- Objetos animados en línea de tiempos
+- Sprites
 
 ## Referencias
 

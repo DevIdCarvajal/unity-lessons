@@ -1,13 +1,10 @@
-# . 
+# 3. Modelado 2D y 3D
 
-## Índice
+## Contenidos
 
-[1. ]()  
-[. ]()
-
-## 1. 
-
-.
+- Componentes y GameObjects
+- Transformaciones de elementos
+- Texturizado y materiales
 
 ## Referencias
 

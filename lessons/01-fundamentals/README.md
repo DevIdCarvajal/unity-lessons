@@ -1,16 +1,16 @@
 # 1. Introducción al mundo 3D
 
-## Índice
+## Contenidos
 
-[1. Sistemas de coordenadas](#1-introducción-al-mundo-3d)  
-[2. Diferentes espacios (local y global)](#2-diferentes-espacios-local-y-global)  
-[3. Vértices y mallas](#3-vértices-y-mallas)  
-[4. Polígonos y ejes](#4-polígonos-y-ejes)  
-[5. Texturizado](#5-texturizado)  
-[6. Sistema de cámaras](#6-sistema-de-cámaras)  
-[7. Iluminación básica](#7-iluminación-básica)
+- Sistemas de coordenadas
+- Diferentes espacios (local y global)
+- Vértices y mallas
+- Polígonos y ejes
+- Texturizado
+- Sistema de cámaras
+- Iluminación básica
 
-## 1. Sistemas de coordenadas
+## Sistemas de coordenadas
 
 ### Justificación
 
@@ -63,30 +63,6 @@ Por tanto, en un espacio afín tenemos __escalares__, __vectores__ (que definen 
   - Rotación
   - Traslación
   - Escalado
-
-## 2. Diferentes espacios (local y global)
-
-.
-
-## 3. Vértices y mallas
-
-.
-
-## 4. Polígonos y ejes
-
-.
-
-## 5. Texturizado
-
-.
-
-## 6. Sistema de cámaras
-
-.
-
-## 7. Iluminación básica
-
-.
 
 ## Referencias
 

@@ -1,15 +1,11 @@
-# . 
+# 11. Desarrollo de proyectos
 
-## Índice
+## Contenidos
 
-[1. ]()  
-[. ]()
+- Creación de un videojuego con realidad virtual
 
-## 1. 
+## Enunciado
+
+Se pide:
 
 .
-
-## Referencias
-
-[.](.)  
-[.](.)
