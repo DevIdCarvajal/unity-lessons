@@ -12,3 +12,9 @@
     - Una mesa de billar con taco y bolas.
 - Añadir los componentes y scripts necesarios para dotar de algún tipo de interacción a los elementos de cada una de las escenas.
 - Añadir los scripts para mostrar por consola un sistema de puntuación en cada una de las escenas.
+
+## Clase 3
+
+- Crear un juego de feria en el que una pistola que se mueve de izquierda a derecha dispare un proyectil "de agua" a un pato y si le impacta, el pato caiga (rote 90).
+- Nivel 2 de dificultad: Que el pato se mueva.
+- Nivel asiático: Que haya muchos patos.

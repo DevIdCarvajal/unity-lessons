@@ -53,6 +53,7 @@ public class DartActions : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
-        moving = false;
+        //moving = false;
+        print("hola!");
     }
 }
