@@ -15,6 +15,7 @@ public class StartButton : MonoBehaviour
         
     }
 
+    // OBLIGATORIO que sea public
     public void LoadMainGame()
     {
         SceneManager.LoadScene("MainGame");
