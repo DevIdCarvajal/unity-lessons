@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flying: 0
+  inDartboard: 0
   speedZ: 1.5
 --- !u!65 &2909900259843251426
 BoxCollider:

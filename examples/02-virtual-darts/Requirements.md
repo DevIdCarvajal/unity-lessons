@@ -80,6 +80,11 @@ https://es.wikipedia.org/wiki/Diagrama_de_flujo
 https://quaternions.online/
 
 https://sketchfab.com/
+http://archive.org/
 
 https://docs.unity3d.com/ScriptReference/Collider.OnCollisionEnter.html
 https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
+https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadScene.html
+
+https://gamedevtraum.com/en/game-development/basic-unity-engine-management/how-to-use-canvas-buttons-in-unity/
+https://gamedevbeginner.com/how-to-play-audio-in-unity-with-examples/
