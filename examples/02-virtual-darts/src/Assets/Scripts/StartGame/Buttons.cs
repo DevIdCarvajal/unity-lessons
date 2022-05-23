@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class Buttons : MonoBehaviour
 {
     void Start()
     {
@@ -19,5 +19,10 @@ public class StartButton : MonoBehaviour
     public void LoadMainGame()
     {
         SceneManager.LoadScene("MainGame");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
