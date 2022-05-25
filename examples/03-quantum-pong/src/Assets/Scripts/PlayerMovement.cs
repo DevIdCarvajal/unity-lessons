@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode up;
     public KeyCode down;
     public float speed = 5;
+    public int score = 0;
 
     void Start()
     {

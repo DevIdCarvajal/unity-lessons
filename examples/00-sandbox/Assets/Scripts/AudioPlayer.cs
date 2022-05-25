@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class AudioPlayer : MonoBehaviour
 {
@@ -30,14 +30,11 @@ public class AudioPlayer : MonoBehaviour
             camera.GetComponent<AudioSource>().Play();
 
             // Cambiar el texto del botón
-            //GameObject myTextObject = GameObject.Find("Canvas/Button/Text");
-            //myTextObject.GetComponent<UnityEngine.UI.Text>().text = "Stop Music";
+            TMP_Text myText = GameObject.Find("Canvas/Button/Text").GetComponent<TMP_Text>();
+            myText.text = "Stop Music";
 
-            //Text myText = GameObject.Find("Canvas/Button/Text").GetComponent<Text>();
-            //myText.text = "Stop Music";
+            // Cambiar el estilo de fuente
             //myText.fontStyle = ... ;
-
-            //GameObject.Find("Canvas/Button/Text").GetComponent<Text>().text = "Stop Music";
 
             playing = true;
         }
@@ -46,8 +43,8 @@ public class AudioPlayer : MonoBehaviour
             GameObject camera = GameObject.Find("Main Camera");
             camera.GetComponent<AudioSource>().Stop();
 
-            //Text myText = GameObject.Find("Canvas/Button/Text").GetComponent<Text>();
-            //myText.text = "Play Music";
+            TMP_Text myText = GameObject.Find("Canvas/Button/Text").GetComponent<TMP_Text>();
+            myText.text = "Play Music";
 
             playing = false;
         }
