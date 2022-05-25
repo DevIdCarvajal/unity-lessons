@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallCollisions : MonoBehaviour
+public class Wall : MonoBehaviour
 {
     void Start()
     {
@@ -16,6 +16,7 @@ public class WallCollisions : MonoBehaviour
 
     void OnTriggerEnter(Collider ball)
     {
-        ball.gameObject.GetComponent<BallMovement>().speedY *= -1;
+        // Cambiar dirección de la bola
+        ball.gameObject.GetComponent<Ball>().speedY *= -1;
     }
 }

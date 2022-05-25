@@ -8,6 +8,9 @@ public class Scoring : MonoBehaviour
     public GameObject player;
     public TMP_Text score;
 
+    public GameObject ballPrefab;
+    Vector3 originBall = new Vector3(0, 5, 0);
+
     void Start()
     {
         
@@ -20,9 +23,29 @@ public class Scoring : MonoBehaviour
 
     void OnTriggerEnter(Collider ball)
     {
-        int newScore = player.GetComponent<PlayerMovement>().score + 1;
-        player.GetComponent<PlayerMovement>().score = newScore;
+        // Destruir la bola anterior
+        Destroy(ball.gameObject);
 
-        score.text = "27";
+        // Reproducir sonido
+        gameObject.GetComponent<AudioSource>().Play();
+
+        // Aumentar en uno el marcador del jugador
+        int newScore = player.GetComponent<Player>().score + 1;
+        player.GetComponent<Player>().score = newScore;
+
+        // Actualizar la puntuación en la pantalla
+        score.text = newScore.ToString();
+
+        // Controlar el final de la partida
+        if (newScore < 10)
+        {
+            // Generar otra bola
+            Instantiate(ballPrefab, originBall, Quaternion.identity);
+        }
+        else
+        {
+            // Fin de partida: Cargar Escena de fin
+            // ...
+        }
     }
 }
