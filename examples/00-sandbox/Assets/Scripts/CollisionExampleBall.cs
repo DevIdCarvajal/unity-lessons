@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CollisionExampleBall : MonoBehaviour
 {
-    public Vector3 movement = Vector3.down;
+    public Vector3 movement = Vector3.down; // (0, -1, 0)
 
     void Start()
     {

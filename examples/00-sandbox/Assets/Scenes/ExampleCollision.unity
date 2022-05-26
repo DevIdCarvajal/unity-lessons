@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 365334715}
   - component: {fileID: 365334716}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -985,7 +985,7 @@ GameObject:
   - component: {fileID: 984264690}
   - component: {fileID: 984264689}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1081,7 +1081,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f4ca3a7b03438e699ee015c2171a21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beep: {fileID: 365334716}
 --- !u!54 &984264690
 Rigidbody:
   m_ObjectHideFlags: 0

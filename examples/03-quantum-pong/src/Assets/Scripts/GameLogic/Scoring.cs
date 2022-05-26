@@ -37,15 +37,16 @@ public class Scoring : MonoBehaviour
         score.text = newScore.ToString();
 
         // Controlar el final de la partida
-        if (newScore < 10)
+        if (newScore < 2)
         {
             // Generar otra bola
             Instantiate(ballPrefab, originBall, Quaternion.identity);
         }
         else
         {
-            // Fin de partida: Cargar Escena de fin
-            // ...
+            // Fin de partida
+            //GameObject.Find("Canvas/Main").SetActive(false);
+            //GameObject.Find("Canvas/End").SetActive(true);
         }
     }
 }

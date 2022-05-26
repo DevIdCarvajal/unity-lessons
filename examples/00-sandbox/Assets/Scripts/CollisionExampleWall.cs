@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CollisionExampleWall : MonoBehaviour
 {
-    public AudioSource beep;
-
     void Start()
     {
         
@@ -19,9 +17,15 @@ public class CollisionExampleWall : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {   
         // Reproducir sonido
-        beep.Play();
+        /*
+        GameObject external = other.gameObject;
+        AudioSource audioExternal = external.GetComponent<AudioSource>();
+        audioExternal.Play();
+        */
+        
+        other.gameObject.GetComponent<AudioSource>().Play();
 
         // Decirle al otro objeto que se mueva a la derecha
-        other.gameObject.GetComponent<CollisionExampleBall>().movement = Vector3.right;
+        other.gameObject.GetComponent<CollisionExampleBall>().movement = Vector3.right; // (1, 0, 0)
     }
 }
