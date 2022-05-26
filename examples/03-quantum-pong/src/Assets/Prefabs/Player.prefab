@@ -115,6 +115,7 @@ MonoBehaviour:
   down: 0
   speed: 10
   score: 0
+  order: 0
 --- !u!82 &3898326488385188008
 AudioSource:
   m_ObjectHideFlags: 0

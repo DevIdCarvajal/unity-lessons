@@ -8,6 +8,10 @@
 - Barra del jugador derecho
 - Pelota
 - Escenario
+- Pared superior
+- Pared inferior
+- Límite izquierdo
+- Límite derecho
 - Puntuación del jugador izquierdo
 - Puntuación del jugador derecho
 - Efectos de sonido:
@@ -38,7 +42,7 @@
 4. Efectos de sonido
   4.1. Efecto 1
     4.1.1. Reproducirse una vez
-      - Al chocar la pelota con una barra de jugador o con el límite superior o inferior
+      - Al chocar la pelota con una barra de jugador
   4.2. Efecto 2
     4.2.1. Reproducirse una vez
       - Al llegar la pelota a uno de los límites laterales

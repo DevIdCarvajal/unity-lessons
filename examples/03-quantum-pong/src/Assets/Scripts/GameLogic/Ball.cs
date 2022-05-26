@@ -4,23 +4,39 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speedX = 3;
-    public float speedY = 3;
+    public float speedX;
+    public float speedY;
 
     void Start()
     {
-        // Determinar aleatoriamente la dirección inicial de la bola
-        int initialX = Random.Range(0, 2);
-        int initialY = Random.Range(0, 2);
+        speedX = Random.Range(2, 5);
+        speedY = Random.Range(2, 5);
+        
+        GameObject gameState = GameObject.Find("GameState");
 
-        if (initialX == 0)
+        // Si es el comienzo de la partida (nadie marcó antes)
+        if (gameState.GetComponent<GameState>().lastPlayer == 0)
         {
+            // Determinar aleatoriamente la dirección inicial de la bola
+            int initialX = Random.Range(0, 2);
+            int initialY = Random.Range(0, 2);
+
+            if (initialX == 0)
+            {
+                speedX *= -1;
+            }
+            if (initialY == 0)
+            {
+                speedY *= -1;
+            }
+        }
+        else // Si acaba de marcar el jugador izquierdo
+        if (gameState.GetComponent<GameState>().lastPlayer == 1)
+        {
+            // Bola a la izquierda
             speedX *= -1;
         }
-        if (initialY == 0)
-        {
-            speedY *= -1;
-        }
+        // Si marcó el derecha, la bola ya va a la derecha (speedX > 0)
     }
 
     void Update()
