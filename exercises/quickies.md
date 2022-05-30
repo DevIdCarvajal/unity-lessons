@@ -20,3 +20,11 @@
 - Nivel asiático: Que haya muchos patos.
 - Nivel Dark Souls asiático: Que haya un sistema de puntuación.
 - Nivel Modo Dios: Con una pantalla de inicio previa y música de fondo.
+
+## Nivel 4
+
+- Crear una cuna o péndulo de Newton usando el sistema de físicas con cuerpos rígidos y articulaciones de bisagra.
+
+- Crear un juego de bolera en el que con las teclas se calcule el ángulo de lanzamiento de la bola, y con el espacio se lance por la pista hacia los bolos.
+
+- Crear un juego de ruleta de la suerte en el que se imprima una fuerza de rotación ("torque") a la ruleta y cuando se pare, saque por consola la puntuación del "gajo" en el que se paró.

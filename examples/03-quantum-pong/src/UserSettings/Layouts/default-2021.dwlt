@@ -317,21 +317,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/UI
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/UI
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /media/thebox/Proyectos/unity-lessons/examples/03-quantum-pong/src
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c05a0000
-    m_LastClickedID: 23232
+    m_SelectedIDs: ba5a0000
+    m_LastClickedID: 23226
     m_ExpandedIDs: 00000000aa5a0000ac5a0000ae5a0000ba5a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -387,7 +387,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -488,9 +488,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3afbffff
+      m_SelectedIDs: 20fbffff
+      m_LastClickedID: -1248
+      m_ExpandedIDs: 06f7ffff56f7ffffeaf7ffff38f8ffff3afbffffda590000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -739,9 +739,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 561.29364, y: 303.48264, z: 19.809387}
+    m_Target: {x: 0, y: 9, z: 0}
     speed: 2
-    m_Value: {x: 561.29364, y: 303.48264, z: 19.809387}
+    m_Value: {x: 0, y: 9, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -792,9 +792,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.0078093237, y: 0.0014952156, z: -0.000011337278, w: 0.9999684}
   m_Size:
-    m_Target: 301.01962
+    m_Target: 9.541639
     speed: 2
-    m_Value: 301.01962
+    m_Value: 9.541639
   m_Ortho:
     m_Target: 0
     speed: 2
