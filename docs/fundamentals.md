@@ -1,14 +1,4 @@
-# 1. Introducción al mundo 3D
-
-## Contenidos
-
-- Sistemas de coordenadas
-- Diferentes espacios (local y global)
-- Vértices y mallas
-- Polígonos y ejes
-- Texturizado
-- Sistema de cámaras
-- Iluminación básica
+# Fundamentos de álgebra lineal
 
 ## Sistemas de coordenadas
 

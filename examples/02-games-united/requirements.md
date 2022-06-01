@@ -82,9 +82,22 @@ https://quaternions.online/
 https://sketchfab.com/
 http://archive.org/
 
+https://www.turbosquid.com/3d-models/free-harrow-darts-3d-model/343240
+https://www.turbosquid.com/3d-models/3d-flipper-s-model/285376
+
 https://docs.unity3d.com/ScriptReference/Collider.OnCollisionEnter.html
 https://docs.unity3d.com/ScriptReference/Object.Instantiate.html
 https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager.LoadScene.html
 
 https://gamedevtraum.com/en/game-development/basic-unity-engine-management/how-to-use-canvas-buttons-in-unity/
 https://gamedevbeginner.com/how-to-play-audio-in-unity-with-examples/
+
+https://docs.unity3d.com/Manual/RigidbodiesOverview.html
+https://docs.unity3d.com/Manual/class-Rigidbody.html
+https://docs.unity3d.com/Manual/class-ConstantForce.html
+
+https://docs.unity3d.com/ScriptReference/Rigidbody.AddForce.html
+https://docs.unity3d.com/ScriptReference/ForceMode.html
+
+https://docs.unity3d.com/Manual/Joints.html
+https://docs.unity3d.com/Manual/class-HingeJoint.html
