@@ -18,8 +18,14 @@ public class BounceBall : MonoBehaviour
 
     void OnCollisionEnter(Collision strike)
     {
+        Debug.DrawRay(
+            strike.contacts[0].point,
+            -strike.contacts[0].normal * 5,
+            Color.magenta
+        );
+
         rigidBall
             .GetComponent<Rigidbody>()
-            .AddForce(strike.contacts[0].normal * 3000, ForceMode.Impulse);
+            .AddForce(-strike.contacts[0].normal * 50);
     }
 }

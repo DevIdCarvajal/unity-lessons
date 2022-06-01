@@ -8,11 +8,8 @@ public class Pinball : MonoBehaviour
     public GameObject rigidLeftFlipper;
     public GameObject rigidRightFlipper;
 
-    public float ballForce = 600f;
-    public float flipperForce = 400f;
-    
-    // public float ballImpulse = 20f;
-    // public float flipperImpulse = 16f;
+    public float ballForce = 200f;
+    public float flipperForce = 600f;
 
     void Start()
     {
@@ -25,15 +22,13 @@ public class Pinball : MonoBehaviour
         {
             rigidBall
                 .GetComponent<Rigidbody>()
-                //.AddForce(0, ballImpulse, 0, ForceMode.Impulse);
-                .AddRelativeForce(new Vector3(Random.Range(-50f, 50f), 0, ballForce));
+                .AddForce(new Vector3(Random.Range(-50f, 50f), 0, ballForce));
         }
 
         if (Input.GetKeyDown(KeyCode.A))
         {
             rigidLeftFlipper
                 .GetComponent<Rigidbody>()
-                //.AddForce(0, flipperImpulse, 0, ForceMode.Impulse);
                 .AddForce(new Vector3(0, 0, flipperForce));
         }
 
@@ -41,7 +36,6 @@ public class Pinball : MonoBehaviour
         {
             rigidRightFlipper
                 .GetComponent<Rigidbody>()
-                //.AddForce(0, flipperImpulse, 0, ForceMode.Impulse);
                 .AddForce(new Vector3(0, 0, flipperForce));
         }
     }

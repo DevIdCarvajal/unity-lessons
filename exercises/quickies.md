@@ -25,7 +25,7 @@
 
 - Crear una cuna o péndulo de Newton usando el sistema de físicas con cuerpos rígidos y articulaciones de bisagra.
 
-- Crear un juego de bolera en el que con las teclas se calcule el ángulo de lanzamiento de la bola, y con el espacio se lance por la pista hacia los bolos.
+- Crear un juego de bolera en el que con las teclas se calcule el ángulo de lanzamiento de la bola por un lado, la posición inicial de la bola en la pista al lanzarla (izquierda-derecha) por otro, y con el espacio se lance la bola por la pista hacia los bolos.
 
 - Crear un juego de ruleta de la suerte en el que se imprima una fuerza de rotación ("torque") a la ruleta y cuando se pare, saque por consola la puntuación del "gajo" en el que se paró.
 
