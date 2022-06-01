@@ -28,3 +28,5 @@
 - Crear un juego de bolera en el que con las teclas se calcule el ángulo de lanzamiento de la bola, y con el espacio se lance por la pista hacia los bolos.
 
 - Crear un juego de ruleta de la suerte en el que se imprima una fuerza de rotación ("torque") a la ruleta y cuando se pare, saque por consola la puntuación del "gajo" en el que se paró.
+
+- Crear un juego de billar con 3 bolas en el que con las teclas se calcule el ángulo de rotación y con el espacio dejándolo apretado la fuerza con la que se dispara la bola blanca.
