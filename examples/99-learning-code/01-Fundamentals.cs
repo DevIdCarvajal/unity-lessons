@@ -31,8 +31,8 @@ namespace HelloWorld
 
       bool connected = true;
 
-      alive = !alive; // false
-      alive = !alive; // true
+      connected = !connected; // false
+      connected = !connected; // true
 
       // Operadores lógicos
       // NOT (!), AND (&&), OR (||)
@@ -42,6 +42,8 @@ namespace HelloWorld
       bool isAlive = true;
 
       bool show = isActive && (!isVisible || isAlive);
+
+      Console.WriteLine(show);
 
       Console.WriteLine("------------ Ejemplo 4 ------------");
 
