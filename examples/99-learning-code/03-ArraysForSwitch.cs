@@ -53,7 +53,7 @@ namespace Arrays
       }
       */
 
-      for (int j = 0; i < scores.Length; j++) {
+      for (int j = 0; j < scores.Length; j++) {
         totalScore += scores[j];
       }
 
@@ -94,7 +94,7 @@ namespace Arrays
       while(k < moreLetters.Length && !foundB) {
         
         if(moreLetters[k] == 'b') {
-          position = i;
+          position = k;
 
           foundB = true;
         }
@@ -109,7 +109,7 @@ namespace Arrays
       for (int l = 0; l < moreLetters.Length; l++) {
         
         if(moreLetters[l] == 'b') {
-          position = i;
+          position = l;
           break;
         }
       }
