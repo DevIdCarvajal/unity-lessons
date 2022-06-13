@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float speed = 10.0f;
-    public float rotationSpeed = 100.0f;
+    [SerializeField]
+    float speed = 10.0f;
+    
+    [SerializeField]
+    float rotationSpeed = 100.0f;
 
     void Start()
     {
@@ -14,14 +17,16 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        float translation = Input.GetAxis("Vertical") * speed;
-        float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+        float translationZ = Input.GetAxis("Vertical") * speed;
+        //float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
+        float translationX = Input.GetAxis("Horizontal") * speed;
 
-        translation *= Time.deltaTime;
-        rotation *= Time.deltaTime;
+        translationZ *= Time.deltaTime;
+        //rotation *= Time.deltaTime;
+        translationX *= Time.deltaTime;
 
-        transform.Translate(0, 0, translation);
-
-        transform.Rotate(0, rotation, 0);
+        //transform.Translate(0, 0, translationZ);
+        //transform.Rotate(0, rotation, 0);
+        transform.Translate(translationX, 0, translationZ);
     }
 }
