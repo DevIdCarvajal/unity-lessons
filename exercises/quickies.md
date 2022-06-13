@@ -30,3 +30,15 @@
 - Crear un juego de ruleta de la suerte en el que se imprima una fuerza de rotación ("torque") a la ruleta y cuando se pare, saque por consola la puntuación del "gajo" en el que se paró.
 
 - Crear un juego de billar con 3 bolas en el que con las teclas se calcule el ángulo de rotación y con el espacio dejándolo apretado la fuerza con la que se dispara la bola blanca.
+
+## Nivel 5
+
+- Retomando el ejercicio del Nivel 1 (o escenario más o menos equivalente), se pide implementar un sistema de movimiento WASD y cámara con ratón en primera persona que permita al jugador pasar por debajo de los toris.
+
+- Añadir al proyecto anterior un sistema de puntuación que anote un punto por cada tori y lo muestre en un texto en la GUI arriba a la derecha.
+
+- Modificar algunos toris para que estén al revés (con el travesaño a ras de suelo y las columnas hacia arriba, como formando una U).
+
+- Dar al jugador la posibilidad de saltar por encima de los toris volteados. Cuando lo haga (sin pisarlos), estos darán doble puntuación al marcador de arriba a la derecha.
+
+NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pueda atraversarlos.
