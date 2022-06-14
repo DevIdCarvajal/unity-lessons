@@ -12,6 +12,8 @@ public class CharacterMovement : MonoBehaviour
 
     [SerializeField]
     float jumpSpeed = 300.0f;
+
+    bool onGround = true;
     
     void Start()
     {
@@ -33,11 +35,29 @@ public class CharacterMovement : MonoBehaviour
         transform.Translate(translationX, 0, translationZ);
 
         // Jumping
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
             gameObject
                 .GetComponent<Rigidbody>()
                 .AddForce(Vector3.up * jumpSpeed);
+        }
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        // Si el otro es el suelo...
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            onGround = false;
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        // Si el otro es el suelo...
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            onGround = true;
         }
     }
 }
