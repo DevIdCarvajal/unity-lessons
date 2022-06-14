@@ -41,4 +41,6 @@
 
 - Dar al jugador la posibilidad de saltar por encima de los toris volteados. Cuando lo haga (sin pisarlos), estos darán doble puntuación al marcador de arriba a la derecha.
 
+- Añadir un sistema de control de cámaras que tenga 3 cámaras: primera persona, tercera persona (detrás del personaje) y vista cenital. Para cambiar entre las cámaras, deberá hacerse con los 3 botones del ratón, asignando una cámara a cada botón.
+
 NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pueda atraversarlos.

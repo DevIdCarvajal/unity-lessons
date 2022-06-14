@@ -7,9 +7,12 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     float speed = 10.0f;
     
-    [SerializeField]
-    float rotationSpeed = 100.0f;
+    // [SerializeField]
+    // float rotationSpeed = 100.0f;
 
+    [SerializeField]
+    float jumpSpeed = 300.0f;
+    
     void Start()
     {
         
@@ -28,5 +31,13 @@ public class CharacterMovement : MonoBehaviour
         //transform.Translate(0, 0, translationZ);
         //transform.Rotate(0, rotation, 0);
         transform.Translate(translationX, 0, translationZ);
+
+        // Jumping
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            gameObject
+                .GetComponent<Rigidbody>()
+                .AddForce(Vector3.up * jumpSpeed);
+        }
     }
 }
