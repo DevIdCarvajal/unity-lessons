@@ -35,15 +35,17 @@ public class CharacterLookAt : MonoBehaviour
         
         if (isLooking)
         {
+            // TODO: Percentages!!
+
             // Horizontal look
-            if(Input.mousePosition.x < 10) // Left limit
+            if(Input.mousePosition.x < 20) // Left limit
             {
-                mouseX -= sensitivity;
+                mouseX -= sensitivity / 2;
             }
             else
-            if(Input.mousePosition.x > Screen.width-10) // Right limit
+            if(Input.mousePosition.x > Screen.width-21) // Right limit
             {
-                mouseX += sensitivity;
+                mouseX += sensitivity / 2;
             }
             else // Between limits
             {
@@ -59,7 +61,7 @@ public class CharacterLookAt : MonoBehaviour
             transform.localEulerAngles = new Vector3(mouseY, 0, 0);
 
             // ------------------- Debugging -------------------
-            // Debug.Log(Screen.width);
+            //Debug.Log(Screen.width);
 
             debugPanelText.text =
                 "X: " + Input.mousePosition.x +
@@ -68,28 +70,29 @@ public class CharacterLookAt : MonoBehaviour
         }
         
         // Raycasting
+
         if(Input.GetKeyDown(KeyCode.R)) {
-            // ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            ray = new Ray(transform.position, transform.forward);
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //ray = new Ray(transform.position, transform.forward);
 
-            // RaycastHit hitData;
+            RaycastHit hitData;
 
-            // if (Physics.Raycast(ray, out hitData))
-            // {
-            //     // The Ray hit something!
-            //     print("Shoot!");
+            if (Physics.Raycast(ray, out hitData))
+            {
+                // The Ray hit something!
+                print("Shoot!");
 
-            //     // Vector3 hitPosition  = hitData.point;
-            //     // float hitDistance    = hitData.distance;
-            //     // string targetTag     = hitData.collider.tag;
-            //     // GameObject hitObject = hitData.transform.gameObject;
+                Vector3 hitPosition  = hitData.point;
+                float hitDistance    = hitData.distance;
+                string targetTag     = hitData.collider.tag;
+                GameObject hitObject = hitData.transform.gameObject;
 
-            //     // Debug.Log(hitPosition);
-            //     // Debug.Log(hitDistance);
-            //     // Debug.Log(targetTag);
-            //     // Destroy(hitObject);
-            // }
-
+                // Debug.Log(hitPosition);
+                // Debug.Log(hitDistance);
+                // Debug.Log(targetTag);
+                Destroy(hitObject);
+            }
+            
             Debug.DrawRay(ray.origin, ray.direction * 10, Color.red, 5);
         }
     }

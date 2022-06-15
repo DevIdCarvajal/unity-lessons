@@ -9,6 +9,8 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     Camera thirdPersonCamera;
 
+    // TODO: Audio Listener toggling
+
     void Start()
     {
         firstPersonCamera = Camera.main;

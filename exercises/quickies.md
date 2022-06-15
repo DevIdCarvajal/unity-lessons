@@ -44,3 +44,13 @@
 - Añadir un sistema de control de cámaras que tenga 3 cámaras: primera persona, tercera persona (detrás del personaje) y vista cenital. Para cambiar entre las cámaras, deberá hacerse con los 3 botones del ratón, asignando una cámara a cada botón.
 
 NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pueda atraversarlos.
+
+## Nivel 6
+
+- Retomando el ejercicio del Nivel 3 (o escenario más o menos equivalente), se pide implementar un sistema de movimiento WASD y cámara con ratón en primera persona que permita al jugador moverse de izquierda a derecha, adelante y atrás.
+
+- Además, debe poder saltar, agacharse y correr, pulsando las teclas Espacio, Ctrl Derecho y Shift Derecho respectivamente.
+
+- El jugador podrá disparar con el click izquierdo del ratón siempre un disparo recto hacia delante desde donde esté y hacia donde esté mirando. Si impacta con un pato, ganará 1 punto.
+
+- Los patos dispararán al jugador también, de manera que el disparo se originará en el pato y se dirigirá hacia la posición del jugador en cada momento.
