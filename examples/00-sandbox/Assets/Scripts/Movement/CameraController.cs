@@ -23,6 +23,8 @@ public class CameraController : MonoBehaviour
     {
         if (Input.GetButton("Fire2"))
         {
+            // ----- Classical if-else version -----
+
             // Change 1PCamera to 3PCamera
 
             if (firstPersonCamera.enabled)
@@ -38,33 +40,15 @@ public class CameraController : MonoBehaviour
                 firstPersonCamera.enabled = true;
             }
 
-            // Ternary version
+            // ----- Ternary version -----
 
             // thirdPersonCamera.enabled = firstPersonCamera.enabled ? true : false;
             // firstPersonCamera.enabled = firstPersonCamera.enabled ? false : true;
-            
-            // Toggle version
 
+            // ----- Toggling booleans version -----
+            
             // firstPersonCamera.enabled = !firstPersonCamera.enabled;
             // thirdPersonCamera.enabled = !thirdPersonCamera.enabled;
-
-            // Ternary operator example
-            /*
-            int numero = 2;
-
-            // string paridad = "";
-
-            // if(numero % 2 == 0) {
-
-            //     paridad = "Par";
-            // }
-            // else
-            // {
-            //     paridad = "Impar";
-            // }
-
-            string paridad = numero % 2 == 0 ? "Par" : "Impar";
-            */
         }
     }
 }

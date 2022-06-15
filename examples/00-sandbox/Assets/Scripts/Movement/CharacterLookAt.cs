@@ -17,12 +17,9 @@ public class CharacterLookAt : MonoBehaviour
     float mouseY = 0;
     float sensitivity = 2;
 
-    Ray ray;
-
     void Start()
     {
-        // Creates a Ray from the character to forward
-        //ray = new Ray(transform.position, transform.forward);
+        
     }
 
     void Update()
@@ -67,33 +64,6 @@ public class CharacterLookAt : MonoBehaviour
                 "X: " + Input.mousePosition.x +
                 " - " +
                 "Y: " + Input.mousePosition.y;
-        }
-        
-        // Raycasting
-
-        if(Input.GetKeyDown(KeyCode.R)) {
-            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            //ray = new Ray(transform.position, transform.forward);
-
-            RaycastHit hitData;
-
-            if (Physics.Raycast(ray, out hitData))
-            {
-                // The Ray hit something!
-                print("Shoot!");
-
-                Vector3 hitPosition  = hitData.point;
-                float hitDistance    = hitData.distance;
-                string targetTag     = hitData.collider.tag;
-                GameObject hitObject = hitData.transform.gameObject;
-
-                // Debug.Log(hitPosition);
-                // Debug.Log(hitDistance);
-                // Debug.Log(targetTag);
-                Destroy(hitObject);
-            }
-            
-            Debug.DrawRay(ray.origin, ray.direction * 10, Color.red, 5);
         }
     }
 }

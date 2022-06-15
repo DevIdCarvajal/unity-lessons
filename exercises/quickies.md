@@ -49,8 +49,12 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 
 - Retomando el ejercicio del Nivel 3 (o escenario más o menos equivalente), se pide implementar un sistema de movimiento WASD y cámara con ratón en primera persona que permita al jugador moverse de izquierda a derecha, adelante y atrás.
 
-- Además, debe poder saltar, agacharse y correr, pulsando las teclas Espacio, Ctrl Derecho y Shift Derecho respectivamente.
+- Además, debe poder saltar, agacharse y correr, pulsando las teclas Espacio, Ctrl Izquierdo y Shift Izquierdo respectivamente.
 
-- El jugador podrá disparar con el click izquierdo del ratón siempre un disparo recto hacia delante desde donde esté y hacia donde esté mirando. Si impacta con un pato, ganará 1 punto.
+- El jugador podrá disparar con el click izquierdo del ratón siempre un disparo recto hacia delante desde donde esté y hacia donde esté mirando. Si impacta con un pato, ganará 1 punto. Si impacta con el DuckBoss, ganará 2 puntos.
 
 - Los patos dispararán al jugador también, de manera que el disparo se originará en el pato y se dirigirá hacia la posición del jugador en cada momento.
+
+Versión 1: Disparo con impacto instantáneo (Sniper mode)
+
+Versión 2: Disparo con un proyectil instanciado (Real shooting mode)
