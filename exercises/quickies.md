@@ -53,8 +53,22 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 
 - El jugador podrá disparar con el click izquierdo del ratón siempre un disparo recto hacia delante desde donde esté y hacia donde esté mirando. Si impacta con un pato, ganará 1 punto. Si impacta con el DuckBoss, ganará 2 puntos.
 
-- Los patos dispararán al jugador también, de manera que el disparo se originará en el pato y se dirigirá hacia la posición del jugador en cada momento.
+- Los patos dispararán al jugador también, de manera que el disparo se originará en el pato y se dirigirá hacia la posición del jugador.
 
-Versión 1: Disparo con impacto instantáneo (Sniper mode)
+  ### Versiones
 
-Versión 2: Disparo con un proyectil instanciado (Real shooting mode)
+  1. Sniper mode:
+      - Cuando se hace clic el disparo traza un rayo y si impacta lo hace de inmediato, matando al pato al instante. Si no, no ocurre nada.
+  2. Gun mode:
+      - Cuando se hace clic el disparo instancia un proyectil cuya dirección será la del rayo generado. Si no hay impacto, se resta un punto y el disparo no ocurre.
+  3. Raziel mode:
+      - El juego comienza con 4 patos en el mundo real (el de los vivos) y 2 patos en el mundo espectral.
+      - El jugador puede alternar entre estar en el mundo de los vivos y el de los muertos pulsando la tecla V.
+      - En el mundo de los vivos:
+        - Solo son visibles los patos vivos (los muertos no).
+        - Se aplican las mismas reglas del "Gun mode" anterior.
+        - Cuando un pato muere, va al mundo de los muertos (y por tanto deja de ser visible en el de los vivos).
+      - En el mundo de los muertos:
+        - Son visibles tanto los patos vivos como los muertos.
+        - Se aplican las mismas reglas del "Gun mode" anterior, pero solo con los muertos, de manera que no es posible matar a un vivo desde este mundo espectral, ni del mismo modo ser impactado por un pato vivo en este plano.
+        - Cuando un pato muerto es rematado, desaparece de toda existencia y da 1 punto (salvo el DuckBoss que da 2).

@@ -6,6 +6,10 @@ public class Raycasting : MonoBehaviour
 {
     Ray ray;
 
+    [SerializeField]
+    LayerMask layerMask;
+    //int layerMask = 1<<3;
+
     void Start()
     {
         // Creates a Ray from the character to forward
@@ -21,7 +25,7 @@ public class Raycasting : MonoBehaviour
             RaycastHit hitData;
 
             // If the Ray hit something...
-            if (Physics.Raycast(ray, out hitData))
+            if (Physics.Raycast(ray, out hitData, 50, layerMask))
             {
                 // Debug.Log(hitPosition);
                 // Debug.Log(hitDistance);
