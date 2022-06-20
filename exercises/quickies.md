@@ -59,8 +59,10 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 
   1. Sniper mode:
       - Cuando se hace clic el disparo traza un rayo y si impacta lo hace de inmediato, matando al pato al instante. Si no, no ocurre nada.
+  
   2. Gun mode:
       - Cuando se hace clic el disparo instancia un proyectil cuya dirección será la del rayo generado. Si no hay impacto, se resta un punto y el disparo no ocurre.
+  
   3. Raziel mode:
       - El juego comienza con 4 patos en el mundo real (el de los vivos) y 2 patos en el mundo espectral.
       - El jugador puede alternar entre estar en el mundo de los vivos y el de los muertos pulsando la tecla V.
