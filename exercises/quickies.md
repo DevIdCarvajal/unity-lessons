@@ -57,6 +57,16 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 
 - Respawn: Añadir un contador de tiempo que cada 15 segundos (en tiempo real) instancie un nuevo pato en la escena, y cada minuto instancie un DuckBoss.
 
+- Minimapa y jumbotron: Añadir un minimapa ortográfico superpuesto arriba a la derecha de la pantalla y además dentro del juego un jumbotron que cada 5 segundos vaya cambiando su proyección entre 3 posibles cámaras puestas alrededor del campo de batalla.
+
+- Modo 2 jugadores con pantalla partida:
+  - Antes de entrar en el juego, mostrar una Pantalla de Selección de Modo: "1 Jugador" o "2 Jugadores".
+  - Si se elige el primer modo, se carga la misma escena en la que se ha estado trabajando en los requisitos anteriores.
+  - Si se elige el segundo, se carga otra escena, que puede ser una copia de la anterior, solo que con las siguientes diferencias:
+    - Hay dos jugadores, uno juega con teclas WASD y ratón y otro con mando (si no se tiene mando con qué probar, poner otras teclas).
+    - La pantalla se divide a la mitad (en horizontal o vertical, como se desee).
+    - Cada jugador tiene su propia puntuación.
+
   ### Versiones
 
   1. Sniper mode:

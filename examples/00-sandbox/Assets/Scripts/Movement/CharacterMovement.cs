@@ -8,15 +8,10 @@ public class CharacterMovement : MonoBehaviour
     float speed = 10.0f;
     
     [SerializeField]
-    float jumpSpeed = 300.0f;
+    float jumpSpeed = 4500.0f;
 
     bool onGround = true;
     
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         float translationZ = Input.GetAxis("Vertical") * speed;
