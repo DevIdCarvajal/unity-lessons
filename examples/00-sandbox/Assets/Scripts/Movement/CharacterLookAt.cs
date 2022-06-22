@@ -4,14 +4,14 @@ using System;
 
 public class CharacterLookAt : MonoBehaviour
 {
-    [SerializeField]
-    bool isLooking = false;
+    // [SerializeField]
+    // bool isLooking = false;
 
     [SerializeField]
     Transform character;
     
-    [SerializeField]
-    TMP_Text debugPanelText;
+    // [SerializeField]
+    // TMP_Text debugPanelText;
 
     float mouseX = 0;
     float mouseY = 0;
@@ -25,13 +25,13 @@ public class CharacterLookAt : MonoBehaviour
     void Update()
     {
         // Toggle between first/third person cameras
-        if (Input.GetButton("Fire1"))
-        {
-            isLooking = !isLooking;
-        }
+        // if (Input.GetButton("Fire1"))
+        // {
+        //     isLooking = !isLooking;
+        // }
         
-        if (isLooking)
-        {
+        // if (isLooking)
+        // {
             // TODO: Percentages!!
 
             // Horizontal look
@@ -58,12 +58,10 @@ public class CharacterLookAt : MonoBehaviour
             transform.localEulerAngles = new Vector3(mouseY, 0, 0);
 
             // ------------------- Debugging -------------------
-            //Debug.Log(Screen.width);
-
-            debugPanelText.text =
-                "X: " + Input.mousePosition.x +
-                " - " +
-                "Y: " + Input.mousePosition.y;
-        }
+            // debugPanelText.text =
+            //     "X: " + Input.mousePosition.x +
+            //     " - " +
+            //     "Y: " + Input.mousePosition.y;
+        // }
     }
 }

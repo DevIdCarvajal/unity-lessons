@@ -53,7 +53,9 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 
 - El jugador podrá disparar con el click izquierdo del ratón siempre un disparo recto hacia delante desde donde esté y hacia donde esté mirando. Si impacta con un pato, ganará 1 punto. Si impacta con el DuckBoss, ganará 2 puntos.
 
-- Los patos dispararán al jugador también, de manera que el disparo se originará en el pato y se dirigirá hacia la posición del jugador.
+- Los patos dispararán también, de manera que el disparo se originará en el pato y se dirigirá hacia la posición del jugador, pudiendo matarse entre ellos.
+
+- Respawn: Añadir un contador de tiempo que cada 15 segundos (en tiempo real) instancie un nuevo pato en la escena, y cada minuto instancie un DuckBoss.
 
   ### Versiones
 
