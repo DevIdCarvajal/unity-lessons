@@ -92,12 +92,14 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 - Crear un personaje a partir de los modelos y animaciones de Mixamo que tenga los siguientes clips: en reposo, andar, correr, saltar.
 
 - Crear las transiciones necesarias para generar la siguiente máquina de estados:
+
   1. En reposo <--> Andar
   2. Andar <--> Correr
   3. Cualquiera (excepto Saltar) --> Saltar
   4. Saltar --> La anterior (desde la que se saltó)
 
 - Implementar las siguientes condiciones a cumplir para cada una de las transiciones anteriores:
+
   1. Mantener pulsada cualquiera de las teclas WASD.
   2. Mantener pulsada la tecla Shift Izquierdo.
   3. Pulsar una vez la tecla Ctrl Izquierdo.
