@@ -104,3 +104,9 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
   2. Mantener pulsada la tecla Shift Izquierdo.
   3. Pulsar una vez la tecla Ctrl Izquierdo.
   4. Pasados 2 segundos desde el inicio del salto.
+
+- Crear una escena 3D para un juego de plataformas (tipo Super Mario 3D) con escaleras, rampas, paredes y plataformas que se muevan.
+
+- Usar el personaje creado con CharacterController para moverlo con el método Move, de manera que sea capaz de moverse por el escenario, saltar, hacer doble salto y tirar bolas de fuego con la mano. Cada movimiento debe cargar su animación correspondiente.
+
+- Crear un segundo personaje que represente un enemigo y moverlo con el método SimpleMove de CharacterController.
