@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class CharacterControllerMovement : MonoBehaviour
 {
-    const float gravity = -9.81f;
+    const float gravity = 9.81f;
+    const float jumpHeight = 1.0f;
 
     float speed = 2.0f;
-    float jumpHeight = -350.0f;
-
-    bool onGround = false;
+    float movementY = 0;
     
     CharacterController characterController;
-
+    
+    bool onGround = false;
+    
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -20,30 +21,39 @@ public class CharacterControllerMovement : MonoBehaviour
 
     void Update()
     {
-        // --------- Movement horizontal & vertical ---------
+        // --------- Movement on ground ---------
 
-        Vector3 translationX = Input.GetAxis("Horizontal") * transform.right;
-        Vector3 translationZ = Input.GetAxis("Vertical") * transform.forward;
-        
-        Vector3 move = translationX + translationZ;
+        // If running...
+        speed = Input.GetKey(KeyCode.LeftShift) ? 4 : 2;
+
+        Vector3 translationX = Input.GetAxis("Horizontal") * transform.right * speed;
+        Vector3 translationZ = Input.GetAxis("Vertical") * transform.forward * speed;
         
         // --------- Jump & gravity movement ---------
 
         onGround = characterController.isGrounded;
         
-        if (onGround && move.y < 0)
+        // Stop falling on ground
+        if (onGround && movementY < 0)
         {
-            move.y = 0;
+            movementY = 0;
         }
 
+        // Jump impulse
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
-            move.y += Mathf.Sqrt(jumpHeight * gravity * Time.deltaTime);
+            movementY += Mathf.Sqrt(jumpHeight * gravity * 2);
         }
         
-        move.y += gravity * Time.deltaTime;
+        // Gravity effect
+        movementY -= gravity * Time.deltaTime;
+
+        Vector3 translationY = new Vector3(0, movementY, 0);
 
         // --------- Do the calculated movement ---------
-        characterController.Move(move * speed * Time.deltaTime);
+
+        Vector3 movement = translationX + translationY + translationZ;
+        
+        characterController.Move(movement * Time.deltaTime);
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+public class RigidCharacterMovement : MonoBehaviour
 {
     [SerializeField]
     float speed = 10.0f;

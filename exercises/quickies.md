@@ -102,7 +102,7 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 
   1. Mantener pulsada cualquiera de las teclas WASD.
   2. Mantener pulsada la tecla Shift Izquierdo.
-  3. Pulsar una vez la tecla Ctrl Izquierdo.
+  3. Pulsar una vez la tecla Espacio.
   4. Pasados 2 segundos desde el inicio del salto.
 
 - Crear una escena 3D para un juego de plataformas (tipo Super Mario 3D) con escaleras, rampas, paredes y plataformas que se muevan.

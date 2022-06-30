@@ -17,38 +17,107 @@ public class AnimationController : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 ||
             Input.GetAxis("Vertical") != 0)
         {
-            // Animation
+            // Walking
             animator.SetBool("isWalking", true);
 
-            // Look
+            // Rotate to look
             if (Input.GetAxis("Horizontal") > 0) // Right
             {
-                transform.localEulerAngles = new Vector3(0, 90, 0);
+                RotateY(90);
             }
             else
             if (Input.GetAxis("Horizontal") < 0) // Left
             {
-                transform.localEulerAngles = new Vector3(0, -90, 0);
+                RotateY(270);
             }
             else
             if (Input.GetAxis("Vertical") > 0) // Up
             {
-                transform.localEulerAngles = new Vector3(0, 0, 0);
+                RotateY(0);
             }
             else // Down
             {
-                transform.localEulerAngles = new Vector3(0, 180, 0);
+                RotateY(180);
             }
+
+            // If running...
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else // Stop walking
+            {
+                animator.SetBool("isRunning", false);
+            }
+        }
+        else // Idle
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isRunning", false);
+        }
+
+        // If jumping...
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetBool("isJumping", true);
+
+            Invoke("stopJumping", 2);
+        }
+
+        // TODO: If parent.onGround = true
+    }
+
+    void stopJumping()
+    {
+        animator.SetBool("isJumping", false);
+    }
+
+    void RotateY(int angle)
+    {
+        if (transform.eulerAngles.y < angle-25 ||
+            transform.eulerAngles.y > angle+25)
+        {
+            bool clockwise = true;
+
+            switch (angle)
+            {
+                case 0: // Up
+                    if (transform.eulerAngles.y < 180)
+                    {
+                        clockwise = false;
+                    }
+                    break;
+                case 90: // Right
+                    if (transform.eulerAngles.y > 90 &&
+                        transform.eulerAngles.y < 270)
+                    {
+                        clockwise = false;
+                    }
+                    break;
+                case 180: // Down
+                    if (transform.eulerAngles.y > 180)
+                    {
+                        clockwise = false;
+                    }
+                    break;
+                case 270: // Left
+                    if (transform.eulerAngles.y < 90 ||
+                        transform.eulerAngles.y > 270)
+                    {
+                        clockwise = false;
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            int rotationAngle = clockwise ? 10 : -10;
+
+            transform.eulerAngles += new Vector3(0, rotationAngle, 0);
         }
         else
         {
-            // Animation
-            animator.SetBool("isWalking", false);
+            transform.eulerAngles = new Vector3(0, angle, 0);
         }
     }
-
-    // One script w/some functions!!
-    // handleAnimation()
-    // handleRotation()
-    // handleGravity()
 }
