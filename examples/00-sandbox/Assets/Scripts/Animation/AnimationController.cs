@@ -5,10 +5,12 @@ using UnityEngine;
 public class AnimationController : MonoBehaviour
 {
     Animator animator;
+    CharacterControllerMovement character;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        character = GetComponentInParent<CharacterControllerMovement>();
     }
 
     void Update()
@@ -35,7 +37,8 @@ public class AnimationController : MonoBehaviour
             {
                 RotateY(0);
             }
-            else // Down
+            else
+            if (Input.GetAxis("Vertical") < 0) // Down
             {
                 RotateY(180);
             }
@@ -61,19 +64,23 @@ public class AnimationController : MonoBehaviour
         {
             animator.SetBool("isJumping", true);
 
-            Invoke("stopJumping", 2);
+            //Invoke("StopJumping", 1.9f);
         }
 
-        // TODO: If parent.onGround = true
+        if (character.onGround)
+        {
+            animator.SetBool("isJumping", false);
+        }
     }
 
-    void stopJumping()
+    void StopJumping()
     {
         animator.SetBool("isJumping", false);
     }
 
     void RotateY(int angle)
     {
+        // If rotating...
         if (transform.eulerAngles.y < angle-25 ||
             transform.eulerAngles.y > angle+25)
         {

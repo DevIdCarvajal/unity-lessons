@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CharacterControllerMovement : MonoBehaviour
 {
-    const float gravity = 9.81f;
-    const float jumpHeight = 1.0f;
+    const float GRAVITY = 9.81f;
+    const float JUMP_HEIGHT = 1.0f;
 
     float speed = 2.0f;
     float movementY = 0;
     
     CharacterController characterController;
     
-    bool onGround = false;
+    public bool onGround = false;
     
     void Start()
     {
@@ -26,8 +26,8 @@ public class CharacterControllerMovement : MonoBehaviour
         // If running...
         speed = Input.GetKey(KeyCode.LeftShift) ? 4 : 2;
 
-        Vector3 translationX = Input.GetAxis("Horizontal") * transform.right * speed;
-        Vector3 translationZ = Input.GetAxis("Vertical") * transform.forward * speed;
+        Vector3 translationX = Input.GetAxis("Horizontal") * transform.right * speed; // (X, 0, 0)
+        Vector3 translationZ = Input.GetAxis("Vertical") * transform.forward * speed; // (0, 0, Z)
         
         // --------- Jump & gravity movement ---------
 
@@ -42,17 +42,17 @@ public class CharacterControllerMovement : MonoBehaviour
         // Jump impulse
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
-            movementY += Mathf.Sqrt(jumpHeight * gravity * 2);
+            movementY += Mathf.Sqrt(JUMP_HEIGHT * GRAVITY * 2);
         }
         
         // Gravity effect
-        movementY -= gravity * Time.deltaTime;
+        movementY -= GRAVITY * Time.deltaTime;
 
-        Vector3 translationY = new Vector3(0, movementY, 0);
+        Vector3 translationY = new Vector3(0, movementY, 0); // (0, Y, 0)
 
         // --------- Do the calculated movement ---------
 
-        Vector3 movement = translationX + translationY + translationZ;
+        Vector3 movement = translationX + translationY + translationZ; // (X, Y, Z)
         
         characterController.Move(movement * Time.deltaTime);
     }
