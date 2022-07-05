@@ -51,7 +51,7 @@ public class CharacterControllerMovement : MonoBehaviour
         Vector3 translationY = new Vector3(0, movementY, 0); // (0, Y, 0)
 
         // --------- Do the calculated movement ---------
-
+    
         Vector3 movement = translationX + translationY + translationZ; // (X, Y, Z)
         
         characterController.Move(movement * Time.deltaTime);

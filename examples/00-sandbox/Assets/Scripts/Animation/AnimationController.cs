@@ -64,13 +64,13 @@ public class AnimationController : MonoBehaviour
         {
             animator.SetBool("isJumping", true);
 
-            //Invoke("StopJumping", 1.9f);
+            Invoke("StopJumping", 1.9f);
         }
 
-        if (character.onGround)
-        {
-            animator.SetBool("isJumping", false);
-        }
+        // if (character.onGround)
+        // {
+        //     animator.SetBool("isJumping", false);
+        // }
     }
 
     void StopJumping()
