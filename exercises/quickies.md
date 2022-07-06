@@ -113,6 +113,6 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 
 - Cuando impacte una bola de fuego del personaje con el enemigo, este saldrá despedido hacia atrás y desaparecerá de la escena a los 1,5 segundos.
 
-- Cuando impacte un enemigo toque al personaje, este caerá muerto como una muñeca de trapo, perderá una vida (de 3, al perder todas se acaba el juego) y a los 3 segundos volverá a levantarse (si aún le quedan vidas).
+- Cuando un enemigo toque al personaje, este caerá muerto como una muñeca de trapo, perderá una vida (de 3, al perder todas se acaba el juego) y a los 3 segundos volverá a levantarse (si aún le quedan vidas).
 
 - Crear un selector de personajes que permita elegir entre al menos 2 personajes distintos, con modelos 3D diferentes pero las mismas animaciones y mecánicas, alterando los valores para cada personaje de manera que estén lo más balanceados posible. Por ejemplo, un personaje podría saltar más alto pero correr menos, otro tirar bolas de fuego más rápidas, o de dos en dos, pero no tener doble salto, etc.

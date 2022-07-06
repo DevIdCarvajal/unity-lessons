@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Destructible
   - Ground
+  - Targetable
   layers:
   - Default
   - TransparentFX

@@ -7,12 +7,12 @@ public class Ragdoll : MonoBehaviour
     Animator animator;
     AnimationController animatorController;
 
-    Rigidbody[] rigidbodies;
+    Rigidbody[] rigidbodies; // Array de Rigidbody
     
     CharacterController characterController;
     CharacterControllerMovement characterMovement;
 
-    bool animationEnabled = false;
+    bool animationEnabled = false; // It borns dead
     
     void Start()
     {
@@ -38,7 +38,7 @@ public class Ragdoll : MonoBehaviour
 
     void ToggleRagdoll()
     {
-        // Set animation state
+        // Set life state
         animationEnabled = !animationEnabled;
 
         // Enable/disable rigidbodies

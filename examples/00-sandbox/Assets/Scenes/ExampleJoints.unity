@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fe9da87abe600019e5b99a2deb0cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 5542800693526054532, guid: da9708cce20880e2da808f52af3ed415, type: 3}
+  arrowPrefab: {fileID: 5542800693526054532, guid: da9708cce20880e2da808f52af3ed415, type: 3}
   arrowOrigin: {fileID: 97360947}
 --- !u!1 &227537052
 GameObject:
@@ -743,7 +743,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13308963
+  m_Radius: 0.08
   m_Height: 0.44363207
   m_Direction: 1
   m_Center: {x: 0, y: -0.22181603, z: 0}
@@ -758,8 +758,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.30325633, y: 0.16933315, z: 0.23269087}
-  m_Center: {x: -0.00000028312206, y: 0.017149366, z: -0.035514086}
+  m_Size: {x: 0.30325633, y: 0.12411701, z: 0.23269087}
+  m_Center: {x: -0.0000002865608, y: 0.014243923, z: -0.035514086}
 --- !u!144 &236645852
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -832,7 +832,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13275929
+  m_Radius: 0.06
   m_Height: 0.53103715
   m_Direction: 1
   m_Center: {x: 0, y: -0.26551858, z: 0}
@@ -1023,7 +1023,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.09469061
+  m_Radius: 0.03
   m_Height: 0.47345304
   m_Direction: 0
   m_Center: {x: -0.23672652, y: 0, z: 0}
@@ -1135,7 +1135,6 @@ GameObject:
   - component: {fileID: 779665930}
   - component: {fileID: 779665929}
   - component: {fileID: 779665928}
-  - component: {fileID: 779665933}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -1252,26 +1251,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779665926}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &779665933
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 779665926}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 028b11f657c17a6c3be5821df851a431, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!144 &818581412
 CharacterJoint:
   m_ObjectHideFlags: 0
@@ -1344,7 +1323,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13275962
+  m_Radius: 0.06
   m_Height: 0.53103846
   m_Direction: 1
   m_Center: {x: 0, y: -0.26551923, z: 0}
@@ -1420,7 +1399,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.0696038
+  m_Radius: 0.04
   m_Height: 0.2784152
   m_Direction: 0
   m_Center: {x: -0.1392076, y: 0, z: 0}
@@ -1571,7 +1550,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.094688796
+  m_Radius: 0.03
   m_Height: 0.47344398
   m_Direction: 0
   m_Center: {x: 0.23672199, y: 0, z: 0}
@@ -1945,7 +1924,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.13308947
+  m_Radius: 0.08
   m_Height: 0.44363156
   m_Direction: 1
   m_Center: {x: 0, y: -0.22181578, z: 0}
@@ -1965,7 +1944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1802376339
 Transform:
   m_ObjectHideFlags: 0
@@ -2048,30 +2027,16 @@ GameObject:
   - component: {fileID: 2065335908}
   - component: {fileID: 2065335907}
   - component: {fileID: 2065335906}
-  - component: {fileID: 2065335905}
   - component: {fileID: 2065335910}
   - component: {fileID: 2065335909}
+  - component: {fileID: 2065335911}
   m_Layer: 0
   m_Name: Dartboard
-  m_TagString: Untagged
+  m_TagString: Targetable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &2065335905
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065335904}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &2065335906
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2149,7 +2114,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1, z: 0.5}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.9642857, z: 0}
+  m_ConnectedAnchor: {x: 0.49999952, y: 0.9642857, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2189,6 +2154,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &2065335911
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065335904}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!54 &2081674216
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2261,7 +2240,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.069603786
+  m_Radius: 0.04
   m_Height: 0.27841514
   m_Direction: 0
   m_Center: {x: 0.13920757, y: 0, z: 0}
