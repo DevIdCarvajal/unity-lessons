@@ -15,8 +15,9 @@ public class ArcherController : MonoBehaviour
 
     void Update()
     {
-        // if(arrows > 0) {
+        if(arrows > 0) {
             if(Input.GetKeyDown(KeyCode.V)) {
+
                 GameObject newArrow = Instantiate(
                     arrowPrefab,
                     arrowOrigin.position,
@@ -27,8 +28,8 @@ public class ArcherController : MonoBehaviour
                     .GetComponent<Rigidbody>()
                     .AddForce(newArrow.transform.forward * arrowSpeed);
 
-                arrows--;
+                //arrows--;
             }
-        // }
+        }
     }
 }
