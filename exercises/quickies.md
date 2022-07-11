@@ -116,3 +116,25 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 - Cuando un enemigo toque al personaje, este caerá muerto como una muñeca de trapo, perderá una vida (de 3, al perder todas se acaba el juego) y a los 3 segundos volverá a levantarse (si aún le quedan vidas).
 
 - Crear un selector de personajes que permita elegir entre al menos 2 personajes distintos, con modelos 3D diferentes pero las mismas animaciones y mecánicas, alterando los valores para cada personaje de manera que estén lo más balanceados posible. Por ejemplo, un personaje podría saltar más alto pero correr menos, otro tirar bolas de fuego más rápidas, o de dos en dos, pero no tener doble salto, etc.
+
+## Nivel 8
+
+- Partiendo del proyecto de Kroz, crear con el editor una mazmorra que cumpla con la forma del mapa (solo el suelo, aunque se pueden meter rampas y muros con distintas formas si se desea).
+
+- Añadir algunos (o todos, preferentemente) de los elementos del projecto Kroz:
+
+      C: Comienzo  
+      D: Dragón  
+      P: Puerta  
+      L: Llave  
+      E: Espada oxidada  
+      O: Oro  
+      T: Trampa  
+      Q: Quitaóxido  
+      S: Sepulcro  
+      I: Inscripción  
+      R: Ratas  
+
+- Establecer los obstáculos (por ejemplo, las ratas) y puntos de salto (por ejemplo, la trampa) que se consideren.
+
+- Crear un sistema de navegación con un personaje y los elementos anteriores que permita moverlo haciendo point-and-click sobre la mazmorra con una perspectiva isométrica.
