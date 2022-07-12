@@ -137,4 +137,6 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 
 - Establecer los obstáculos (por ejemplo, las ratas) y puntos de salto (por ejemplo, la trampa) que se consideren.
 
-- Crear un sistema de navegación con un personaje y los elementos anteriores que permita moverlo haciendo point-and-click sobre la mazmorra con una perspectiva isométrica.
+- Crear un sistema de navegación con un personaje y los elementos anteriores que permita moverlo haciendo point-and-click sobre la mazmorra con una perspectiva isométrica (que siga al personaje).
+
+- Modificar la escena (añadiendo y modificando los objetos que sean necesarios) para que haya obstáculos en movimiento, saltos desde diferentes alturas y máscaras de área con distintos costes para el sistema de navegación, así como algunos agentes más (enemigos) que no puedan recorrer ciertas zonas concretas.
