@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavAgent : MonoBehaviour
+public class CharacterNavAgent : MonoBehaviour
 {
     NavMeshAgent navMeshAgent;
 
@@ -17,7 +17,6 @@ public class NavAgent : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            
             RaycastHit hit;
 
             if(Physics.Raycast(ray, out hit))
