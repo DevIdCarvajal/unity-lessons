@@ -2361,6 +2361,22 @@ PrefabInstance:
       propertyPath: points.Array.data[3]
       value: 
       objectReference: {fileID: 1230437159}
+    - target: {fileID: 4763702475722181130, guid: 959af55f34163480d94097332d69e781, type: 3}
+      propertyPath: points.Array.data[4]
+      value: 
+      objectReference: {fileID: 1230437159}
+    - target: {fileID: 4763702475722181130, guid: 959af55f34163480d94097332d69e781, type: 3}
+      propertyPath: points.Array.data[5]
+      value: 
+      objectReference: {fileID: 1230437159}
+    - target: {fileID: 4763702475722181130, guid: 959af55f34163480d94097332d69e781, type: 3}
+      propertyPath: points.Array.data[6]
+      value: 
+      objectReference: {fileID: 1230437159}
+    - target: {fileID: 4763702475722181130, guid: 959af55f34163480d94097332d69e781, type: 3}
+      propertyPath: points.Array.data[7]
+      value: 
+      objectReference: {fileID: 1230437159}
     - target: {fileID: 4763702475722181135, guid: 959af55f34163480d94097332d69e781, type: 3}
       propertyPath: m_RootOrder
       value: 10

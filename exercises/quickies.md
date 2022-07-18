@@ -140,3 +140,5 @@ NOTA: Los toris deben ser objetos colisionables, de manera que el jugador no pue
 - Crear un sistema de navegación con un personaje y los elementos anteriores que permita moverlo haciendo point-and-click sobre la mazmorra con una perspectiva isométrica (que siga al personaje).
 
 - Modificar la escena (añadiendo y modificando los objetos que sean necesarios) para que haya obstáculos en movimiento, saltos desde diferentes alturas y máscaras de área con distintos costes para el sistema de navegación, así como algunos agentes más (enemigos) que no puedan recorrer ciertas zonas concretas.
+
+- Añadir un personaje no jugador (NPC) que sea aliado del personaje jugador, de manera que le siga siempre poniéndose detrás (como un buen escudero) y cuando esté cerca de un enemigo vaya hacia él y lo destruya, volviendo después al lado del jugador. Si hay un ítem cerca, también debe recogerlo y añadirlo al inventario del jugador.
