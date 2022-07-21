@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 978048521360520113}
   - component: {fileID: 978048521360520112}
+  - component: {fileID: 1880454621962178550}
   m_Layer: 0
   m_Name: ChatPlayer
   m_TagString: Untagged
@@ -48,3 +49,17 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &1880454621962178550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978048521360520119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7abbe3b94cb284b479e5a0c683f86109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Conversation:
+    m_InternalValue: 0

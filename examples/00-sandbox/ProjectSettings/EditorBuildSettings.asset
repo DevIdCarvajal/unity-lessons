@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ExampleChat.unity
-    guid: b7da9c91ab3cce17b867a241d3d4beea
+    path: Assets/Scenes/ExampleNavMesh.unity
+    guid: 48e10fbaa49828a9abc16c6b4fd079e9
   m_configObjects: {}
