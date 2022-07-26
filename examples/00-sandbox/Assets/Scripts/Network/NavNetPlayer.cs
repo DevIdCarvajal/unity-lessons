@@ -5,13 +5,17 @@ using UnityEngine.AI;
 public class NavNetPlayer : NetworkBehaviour
 {
     NavMeshAgent navMeshAgent;
-    
+
+    GameObject enemyObject;
+    bool enemy = true;
+
     public NetworkVariable<Vector3> Position = new NetworkVariable<Vector3>();
 
     public override void OnNetworkSpawn()
     {
         // Initialize local network object
         navMeshAgent = GetComponent<NavMeshAgent>();
+        enemyObject = GameObject.Find("Enemy");
 
         if (IsOwner)
         {
@@ -34,6 +38,13 @@ public class NavNetPlayer : NetworkBehaviour
         }
     }
 
+    // Executed in client-side
+    [ClientRpc]
+    public void ToggleEnemyClientRpc()
+    {
+        enemy = !enemy;
+    }
+
     // Executed in server-side
     [ServerRpc]
     void SubmitPositionRequestServerRpc(Vector3 hitPoint)
@@ -46,5 +57,13 @@ public class NavNetPlayer : NetworkBehaviour
     {
         // Always networked (shared) value
         navMeshAgent.SetDestination(Position.Value);
+
+        if (!enemy) {
+            enemyObject.SetActive(false);
+        }
+        else
+        {
+            enemyObject.SetActive(true);
+        }
     }
 }

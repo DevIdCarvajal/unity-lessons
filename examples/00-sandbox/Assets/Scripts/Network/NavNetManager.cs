@@ -56,5 +56,21 @@ public class NavNetManager : MonoBehaviour
                 player.Move(hit.point);
             }
         }
+
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            if (NetworkManager.Singleton.IsServer)
+            {
+                foreach (ulong uid in NetworkManager.Singleton.ConnectedClientsIds)
+                {
+                    NetworkManager
+                        .Singleton
+                        .SpawnManager
+                        .GetPlayerNetworkObject(uid)
+                        .GetComponent<NavNetPlayer>()
+                        .ToggleEnemyClientRpc();
+                }
+            }
+        }
     }
 }
