@@ -5,38 +5,46 @@ using UnityEngine.AI;
 public class NavNetPlayer : NetworkBehaviour
 {
     NavMeshAgent navMeshAgent;
-    Vector3 hitPoint;
     
     public NetworkVariable<Vector3> Position = new NetworkVariable<Vector3>();
 
     public override void OnNetworkSpawn()
     {
-        hitPoint = transform.position;
+        // Initialize local network object
         navMeshAgent = GetComponent<NavMeshAgent>();
+
+        if (IsOwner)
+        {
+            Move(transform.position);
+        }
     }
 
-    public void Move(Vector3 point)
+    public void Move(Vector3 hitPoint)
     {
-        hitPoint = point;
-
+        // Server case
         if (NetworkManager.Singleton.IsServer)
         {
+            // Local value is networked (shared) value
             Position.Value = hitPoint;
         }
-        else
+        else // Client case
         {
-            SubmitPositionRequestServerRpc();
+            // Local value is sent to server to share
+            SubmitPositionRequestServerRpc(hitPoint);
         }
     }
 
+    // Executed in server-side
     [ServerRpc]
-    void SubmitPositionRequestServerRpc(ServerRpcParams rpcParams = default)
+    void SubmitPositionRequestServerRpc(Vector3 hitPoint)
     {
+        // Update network (shared) variable from client to server
         Position.Value = hitPoint;
     }
 
     void Update()
     {
-        navMeshAgent.SetDestination(hitPoint);
+        // Always networked (shared) value
+        navMeshAgent.SetDestination(Position.Value);
     }
 }

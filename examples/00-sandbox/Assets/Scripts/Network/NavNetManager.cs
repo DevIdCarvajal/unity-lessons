@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class NavNetManager : MonoBehaviour
 {
+    // User Interface to create Host/Server/Client connections & get status info
     void OnGUI()
     {
         GUILayout.BeginArea(new Rect(10, 10, 300, 300));
@@ -19,6 +20,7 @@ public class NavNetManager : MonoBehaviour
         GUILayout.EndArea();
     }
 
+    // Buttons
     static void StartButtons()
     {
         if (GUILayout.Button("Host")) NetworkManager.Singleton.StartHost();
@@ -26,6 +28,7 @@ public class NavNetManager : MonoBehaviour
         if (GUILayout.Button("Server")) NetworkManager.Singleton.StartServer();
     }
 
+    // Info
     static void StatusLabels()
     {
         string mode = NetworkManager.Singleton.IsHost ?
@@ -36,6 +39,8 @@ public class NavNetManager : MonoBehaviour
         GUILayout.Label("Mode: " + mode);
     }
 
+    // Local GameObject logic
+    // (as event handling, firing networked action to Network Object)
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
@@ -45,6 +50,7 @@ public class NavNetManager : MonoBehaviour
 
             if(Physics.Raycast(ray, out hit))
             {
+                // Selecting local network object
                 NetworkObject playerObject = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject();
                 NavNetPlayer player = playerObject.GetComponent<NavNetPlayer>();
                 player.Move(hit.point);
