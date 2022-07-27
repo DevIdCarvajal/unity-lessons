@@ -51,7 +51,7 @@ public class EnemyNavAgent : MonoBehaviour
         if (points.Length == 0)
             return;
         
-        navMeshAgent.SetDestination( points[destination].position );
+        navMeshAgent.SetDestination(points[destination].position);
 
         destination = (destination + 1) % points.Length;
     }

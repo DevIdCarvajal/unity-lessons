@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class NavNetManager : MonoBehaviour
 {
+    [SerializeField]
+    GameObject enemyPrefab;
+
     // User Interface to create Host/Server/Client connections & get status info
     void OnGUI()
     {
@@ -21,7 +24,7 @@ public class NavNetManager : MonoBehaviour
     }
 
     // Buttons
-    static void StartButtons()
+    void StartButtons()
     {
         if (GUILayout.Button("Host")) NetworkManager.Singleton.StartHost();
         if (GUILayout.Button("Client")) NetworkManager.Singleton.StartClient();
@@ -29,7 +32,7 @@ public class NavNetManager : MonoBehaviour
     }
 
     // Info
-    static void StatusLabels()
+    void StatusLabels()
     {
         string mode = NetworkManager.Singleton.IsHost ?
             "Host" : NetworkManager.Singleton.IsServer ? "Server" : "Client";
@@ -37,6 +40,28 @@ public class NavNetManager : MonoBehaviour
         GUILayout.Label("Transport: " +
             NetworkManager.Singleton.NetworkConfig.NetworkTransport.GetType().Name);
         GUILayout.Label("Mode: " + mode);
+
+        if (NetworkManager.Singleton.IsServer)
+        {
+            if (GUILayout.Button("Enemy", GUILayout.Width(100)))
+            {
+                GameObject enemy = Instantiate(enemyPrefab, new Vector3(8.3f, 0.8f, 0), Quaternion.identity);
+                enemy.GetComponent<NetworkObject>().Spawn();
+            }
+
+            foreach (ulong uid in NetworkManager.Singleton.ConnectedClientsIds)
+            {
+                if (GUILayout.Button("Client " + uid, GUILayout.Width(100)))
+                {
+                    NetworkManager
+                        .Singleton
+                        .SpawnManager
+                        .GetPlayerNetworkObject(uid)
+                        .GetComponent<NavNetPlayer>()
+                        .PowerUpClientRpc();
+                }
+            }
+        }
     }
 
     // Local GameObject logic
@@ -68,7 +93,7 @@ public class NavNetManager : MonoBehaviour
                         .SpawnManager
                         .GetPlayerNetworkObject(uid)
                         .GetComponent<NavNetPlayer>()
-                        .ToggleEnemyClientRpc();
+                        .PowerUpClientRpc();
                 }
             }
         }

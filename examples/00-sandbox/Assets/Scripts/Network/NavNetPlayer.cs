@@ -6,16 +6,12 @@ public class NavNetPlayer : NetworkBehaviour
 {
     NavMeshAgent navMeshAgent;
 
-    GameObject enemyObject;
-    bool enemy = true;
-
     public NetworkVariable<Vector3> Position = new NetworkVariable<Vector3>();
 
     public override void OnNetworkSpawn()
     {
         // Initialize local network object
         navMeshAgent = GetComponent<NavMeshAgent>();
-        enemyObject = GameObject.Find("Enemy");
 
         if (IsOwner)
         {
@@ -40,9 +36,9 @@ public class NavNetPlayer : NetworkBehaviour
 
     // Executed in client-side
     [ClientRpc]
-    public void ToggleEnemyClientRpc()
+    public void PowerUpClientRpc()
     {
-        enemy = !enemy;
+        navMeshAgent.speed *= 1.5f;
     }
 
     // Executed in server-side
@@ -57,13 +53,5 @@ public class NavNetPlayer : NetworkBehaviour
     {
         // Always networked (shared) value
         navMeshAgent.SetDestination(Position.Value);
-
-        if (!enemy) {
-            enemyObject.SetActive(false);
-        }
-        else
-        {
-            enemyObject.SetActive(true);
-        }
     }
 }
