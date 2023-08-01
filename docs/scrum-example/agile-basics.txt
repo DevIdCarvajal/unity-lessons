@@ -1,0 +1,17 @@
+
+Para estimar cada historia:
+  - Qué necesito previamente (si lo tengo o no)
+  - Si es la primera vez que lo hago (o no)
+  etc.
+
+-----------------------
+
+DAILY
+
+1) ¿Qué hice antes?
+2) ¿Qué problemas?
+3) ¿Qué voy a hacer hoy?
+
+-----------------------
+
+Sprint = 10 Story Points = 12 horas = 0.75 SP/hora

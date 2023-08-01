@@ -1,0 +1,9 @@
+- Pieza
+  + Aparecer cuando se coloque la anterior (0.5SP)
+  - Parar
+    + Cuando choque con el límite inferior
+    / Cuando choque con otra pieza por debajo (4SP)
+  - Hacer una o más líneas
+    - Cuando se cubran 1 o más filas tras colocar la pieza (3.5SP)
+
+- Actualizar Puntuación (1.5SP)

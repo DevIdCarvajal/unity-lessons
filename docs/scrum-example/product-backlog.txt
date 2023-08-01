@@ -1,0 +1,11 @@
++ Pieza
+  + Aparecer en el límite superior
+  + Mover un paso a la izquierda/derecha
+  + Mover un paso hacia abajo
+  + Rotar hacia la izquierda/derecha
+  - Colocar y parar la pieza
+  - Hacer una o más líneas
+- Puntuación
+- Efectos de sonido
+- Fin del juego
+* Cambio de skin (nivel)

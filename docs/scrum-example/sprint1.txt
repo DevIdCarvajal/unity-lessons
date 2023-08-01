@@ -1,0 +1,19 @@
+- Pieza
+
+  + Aparecer en el límite superior, elegida aleatoriamente (2SP)
+    + Si es la primera, al principio del juego
+    X+ Si es la segunda o sucesivas, cuando se haya colocado la pieza anterior
+  
+  + Mover un paso a la izquierda/derecha (2SP)
+    + Cuando el jugador pulse la tecla Izquierda/Derecha
+    + Dentro de los límites laterales
+  
+  + Mover un paso hacia abajo (3SP)
+    + Mientras el jugador pulse la tecla Abajo
+    + Cada 2 segundos
+    X+ Y después, cada vez más deprisa, según aumenta la puntuación
+  
+  + Rotar hacia la izquierda/derecha (3SP)
+    + Cuando el jugador pulse la tecla Ctrl-Izda/Espacio
+      + Cuando no está pegada a los límites laterales
+      + Cuando está pegada a los límites laterales
